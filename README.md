@@ -1,4 +1,4 @@
 # chuwa_hw2
 
 ## Result :
-![Screenshot 2022-07-09 194729](https://user-images.githubusercontent.com/108693631/178129214-ddb43652-135e-469c-903c-07b44d8127b6.png)
+![Screenshot 2022-07-11 191713](https://user-images.githubusercontent.com/108693631/178394206-0913a4e3-6f5f-4f15-8e52-1664bda953f0.png)
