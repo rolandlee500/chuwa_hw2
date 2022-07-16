@@ -51,7 +51,7 @@ console.log(totalValue(itemObject));
 
 // =============================== Line Break ==========================================================
 
-const string = ` Perhaps The Easiest-to-understand Case For Reduce Is To Return The Sum Of All The Elements In An Array `;
+const string = ` Perhaps The Easiest-to-understand  Case  For Reduce Is  To Return The Sum Of  All The Elements In  An Array  `;
 
 /**
  * Given the string, implement a function to remove all the non-alphabet characters and
@@ -64,7 +64,7 @@ function removeNonAlphabet(string) {
     .split(" ")
     .map((word) => {
       // remove all non-alphabet characters
-      word = word.toLowerCase().replaceAll(/[^a-z]/gi, "");
+      word = word.toLowerCase().replaceAll(/[^a-z]/gi, " ");
 
       return word;
     })
@@ -150,4 +150,26 @@ function retrieveKeys(array, keys) {
   }
 }
 
-console.log(mergeArrays(first, second));
+// console.log(mergeArrays(first, second));
+
+// Redo last question
+function mergeTwoArrays(array1, array2) {
+  const hashMap = {};
+
+  const mergeArray = [...array1, ...array2];
+  mergeArray.forEach((item) => {
+    if (!hashMap[item.uuid]) {
+      hashMap[item.uuid] = {
+        uuid: item.uuid,
+        name: item.name ?? null,
+        role: item.role ?? null,
+      };
+    } else {
+      //combine elements
+      hashMap[item.uuid] = { ...hashMap[item.uuid], ...item };
+    }
+  });
+  return Object.values(hashMap);
+}
+
+console.log(mergeTwoArrays(first, second));
